@@ -1,17 +1,23 @@
 import React, { Component } from "react";
 import { moveSyntheticComments } from "typescript";
-import { MuiThemeProvider } from "@material-ui/core";
+import { MuiThemeProvider, Box, Container } from "@material-ui/core";
 import theme from "../../themes/theme";
-import { useTheme } from "@material-ui/core/styles";
 
 const Projects = () => {
-  const theme = useTheme();
   return (
     <MuiThemeProvider theme={theme}>
-      <h1 color={theme.palette.secondary}>Projects</h1>
-      <div color={theme.palette.primary.main}>
-        l;ksndflksdk ks a as asd asd as ssdadasdas
-      </div>
+      <Box color={theme.palette.primary.contrastText}>
+        <h1>Projects</h1>
+        <Container>
+          <Box
+            color={theme.palette.secondary.light}
+            padding={(50, 50, 50, 50)}
+          ></Box>
+        </Container>
+        <Container>wooo</Container>
+        <Container>wooo</Container>
+      </Box>
+      <div>l;ksndflksdk ks a as asd asd as ssdadasdas</div>
     </MuiThemeProvider>
   );
 };

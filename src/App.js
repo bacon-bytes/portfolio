@@ -26,7 +26,7 @@ class App extends Component {
   changeBackground = () => {
     let path = window.location.pathname;
 
-    if (path === "/") document.body.style = "background: black";
+    if (path === "/") document.body.style = "background: #ffdc65";
     else document.body.style = "background: #5f7481";
   };
 
