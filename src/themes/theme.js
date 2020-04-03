@@ -4,6 +4,8 @@ import { createMuiTheme } from "@material-ui/core/styles";
 
 // Fonts - https://material.io/design/typography/the-type-system.html#type-scale
 
+// https://material-ui.com/customization/default-theme/
+
 const palette = {
   primary: { main: "#344955" },
   secondary: { main: "#f9aa33" }
