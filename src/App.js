@@ -12,16 +12,47 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    changed: true
+    changed: true,
+    tabValue: 0
   };
 
   componentDidMount() {
     this.changeBackground();
+    // this.changeTabValue();
   }
 
   componentDidUpdate() {
     this.changeBackground();
+    //this.changeTabValue();
   }
+
+  // changeTabValue = () => {
+  //   let path = window.location.pathname;
+  //   let tabValue = this.switchPathToTab(path);
+  //   this.setState({ tabValue });
+  // };
+
+  // switchPathToTab = path => {
+  //   switch (path) {
+  //     case "/":
+  //       return 0;
+  //       break;
+  //     case "/work":
+  //       return 1;
+  //       break;
+  //     case "/projects":
+  //       return 2;
+  //       break;
+  //     case "/about":
+  //       return 3;
+  //       break;
+  //     case "/contact":
+  //       return 4;
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // };
 
   changeBackground = () => {
     const background = "/bg.png";
@@ -44,12 +75,12 @@ class App extends Component {
       }
       // main: { backgroundImage: "url(" + { Background } + ")" }
     };
-
+    const { tabValue } = this.state;
     return (
       <React.Fragment>
         <MuiThemeProvider theme={theme}>
           <div>
-            <NavBar triggerChange={this.triggerChange} />
+            <NavBar triggerChange={this.triggerChange} tabValue={tabValue} />
             <div onLoad={this.checkPageChange} style={styles.container}>
               <Switch>
                 <Route path="/about" component={About} />

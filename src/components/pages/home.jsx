@@ -21,6 +21,8 @@ class Home extends Component {
             color: "White",
             textAlign: "center",
             fontFamily: "Libre Baskerville",
+            //fontFamily: "Proza Libre",
+            fontWeight: "bold",
             textShadow: "1px 1px #000000"
           }}
         >
