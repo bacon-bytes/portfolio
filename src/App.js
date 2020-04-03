@@ -24,9 +24,12 @@ class App extends Component {
   }
 
   changeBackground = () => {
+    const background = "/bg.png";
     let path = window.location.pathname;
 
-    if (path === "/") document.body.style = "background: #ffdc65";
+    if (path === "/")
+      document.body.style.backgroundImage = "url(" + background + ")";
+    // = "background: #232834";
     else document.body.style = "background: #5f7481";
   };
 
@@ -39,6 +42,7 @@ class App extends Component {
       container: {
         margin: "70px 20px 20px 15px"
       }
+      // main: { backgroundImage: "url(" + { Background } + ")" }
     };
 
     return (

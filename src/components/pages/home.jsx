@@ -5,13 +5,33 @@ class Home extends Component {
 
   render() {
     const styles = {
-      container: {
-        backgroundColor: "#000000"
-      }
+      main: {}
     };
     return (
-      <div>
-        <h1>Home</h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "70px"
+        }}
+      >
+        <h1
+          style={{
+            color: "White",
+            textAlign: "center",
+            fontFamily: "Libre Baskerville",
+            textShadow: "1px 1px #000000"
+          }}
+        >
+          Hi, I'm Sean
+          <br />
+          <br />
+          Web / Game / Software
+          <br />
+          <br />
+          Developer
+        </h1>
       </div>
     );
   }
