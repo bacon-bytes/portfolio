@@ -26,34 +26,6 @@ class App extends Component {
     //this.changeTabValue();
   }
 
-  // changeTabValue = () => {
-  //   let path = window.location.pathname;
-  //   let tabValue = this.switchPathToTab(path);
-  //   this.setState({ tabValue });
-  // };
-
-  // switchPathToTab = path => {
-  //   switch (path) {
-  //     case "/":
-  //       return 0;
-  //       break;
-  //     case "/work":
-  //       return 1;
-  //       break;
-  //     case "/projects":
-  //       return 2;
-  //       break;
-  //     case "/about":
-  //       return 3;
-  //       break;
-  //     case "/contact":
-  //       return 4;
-  //       break;
-  //     default:
-  //       break;
-  //   }
-  // };
-
   changeBackground = () => {
     const background = "/bg.png";
     let path = window.location.pathname;
