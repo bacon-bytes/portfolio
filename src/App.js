@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { Route, Switch, Redirect, useLocation } from "react-router-dom";
+import {
+  Route,
+  Switch,
+  Redirect,
+  useLocation,
+  withRouter
+} from "react-router-dom";
 import { MuiThemeProvider } from "@material-ui/core";
 import theme from "./themes/theme";
 import NavBar from "./components/navBar";
@@ -9,6 +15,7 @@ import Projects from "./components/pages/projects";
 import Work from "./components/pages/work";
 import Home from "./components/pages/home";
 import "./App.css";
+import Code from "./components/pages/code";
 
 class App extends Component {
   state = {
@@ -56,9 +63,8 @@ class App extends Component {
             <div onLoad={this.checkPageChange} style={styles.container}>
               <Switch>
                 <Route path="/about" component={About} />
+                <Route path="/code" component={Code} />
                 <Route path="/contact" component={Contact} />
-                <Route path="/projects" component={Projects} />
-                <Route path="/work" component={Work} />
                 <Route path="/" component={Home} />
               </Switch>
             </div>

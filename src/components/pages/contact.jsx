@@ -1,15 +1,7 @@
-import React, { Component } from "react";
-import SendEmail from "../sendEmail";
+import React from "react";
 import theme from "../../themes/theme";
-import {
-  MuiThemeProvider,
-  Box,
-  Container,
-  CardActionArea,
-  CardContent
-} from "@material-ui/core";
+import { MuiThemeProvider, CardContent } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
-import Paper from "@material-ui/core/Paper";
 import EmailForm from "../emailForm";
 
 const Contact = () => {
@@ -34,6 +26,7 @@ const Contact = () => {
       alignItems: "center"
     }
   };
+
   return (
     <MuiThemeProvider theme={theme}>
       <div style={styles.container}>
@@ -42,12 +35,9 @@ const Contact = () => {
             <h1>Contact</h1>
           </CardContent>
           <div style={styles.content}>
-            <SendEmail />
+            <EmailForm />
           </div>
         </Card>
-      </div>
-      <div>
-        <EmailForm />
       </div>
     </MuiThemeProvider>
   );

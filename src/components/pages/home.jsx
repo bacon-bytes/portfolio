@@ -1,9 +1,24 @@
 import React, { Component } from "react";
 
+const textArray = ["Web", "Game", "Software", "Frontend"];
+
 class Home extends Component {
-  state = {};
+  state = { textIndex: 0 };
+
+  componentDidMount() {
+    this.timeout = setInterval(() => {
+      let curIndex = this.state.textIndex;
+      this.setState({ textIndex: curIndex + 1 });
+    }, 1500);
+  }
+
+  componentDidUnmount() {
+    clearInterval(this.timeout);
+  }
 
   render() {
+    let changingAdjective = textArray[this.state.textIndex % textArray.length];
+
     const styles = {
       main: {}
     };
@@ -29,7 +44,7 @@ class Home extends Component {
           Hi, I'm Sean
           <br />
           <br />
-          Web / Game / Software
+          {changingAdjective}
           <br />
           <br />
           Developer

@@ -21,17 +21,14 @@ const NavBar = ({ triggerChange, tabValue }) => {
       case "/":
         return 0;
         break;
-      case "/work":
+      case "/code":
         return 1;
         break;
-      case "/projects":
+      case "/about":
         return 2;
         break;
-      case "/about":
-        return 3;
-        break;
       case "/contact":
-        return 4;
+        return 3;
         break;
       default:
         break;
@@ -49,13 +46,7 @@ const NavBar = ({ triggerChange, tabValue }) => {
           component={Link}
           onClick={triggerChange}
         />
-        <Tab label="Work" to="/work" component={Link} onClick={triggerChange} />
-        <Tab
-          label="Projects"
-          to="/projects"
-          component={Link}
-          onClick={triggerChange}
-        />
+        <Tab label="Code" to="/code" component={Link} onClick={triggerChange} />
         <Tab
           label="About"
           to="/about"

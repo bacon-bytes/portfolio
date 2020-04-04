@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import MaterialForm from "./common/materialForm";
 import Joi from "@hapi/joi";
+import emailjs from "emailjs-com";
+import { useHistory } from "react-router-dom";
+import { withRouter } from "react-router";
 
 class EmailForm extends MaterialForm {
   state = {
     data: {
-      name: "",
-      email: "",
+      user_name: "",
+      user_email: "",
       message: ""
     },
     genres: [],
@@ -14,11 +17,11 @@ class EmailForm extends MaterialForm {
   };
 
   schema = Joi.object({
-    name: Joi.string()
+    user_name: Joi.string()
       .required()
       .label("Name"),
 
-    email: Joi.string()
+    user_email: Joi.string()
       .email({ tlds: { allow: false } })
       .required()
       .label("Email"),
@@ -28,22 +31,43 @@ class EmailForm extends MaterialForm {
       .label("Message")
   });
 
-  doSubmit = async () => {
-    console.log("Submitted");
+  doSubmit = target => {
+    window.location = "/";
+    //this.props.history.push("/");
+    sendEmail(target);
   };
 
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          {this.renderInput("name", "Name")}
-          {this.renderInput("email", "Email")}
+          {this.renderInput("user_name", "Name")}
+          {this.renderInput("user_email", "Email")}
           {this.renderInput("message", "Message")}
           {this.renderButton("Save")}
         </form>
       </div>
     );
   }
+}
+
+function sendEmail(target) {
+  console.log("sent");
+  emailjs.sendForm(
+    "mailjet",
+    "baconbyte",
+    target,
+    "user_ORMrxVi9MVawG7Sjvxr7W"
+  );
+
+  // .then(
+  //   result => {
+  //     console.log(result.text);
+  //   },
+  //   error => {
+  //     console.log(error.text);
+  //   }
+  // );
 }
 
 export default EmailForm;

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Joi from "@hapi/joi";
 import Input from "./input";
+import Button from "@material-ui/core/Button";
 
 class MaterialForm extends Component {
   state = {
@@ -35,12 +36,10 @@ class MaterialForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-
     const errors = this.validation(this.state.data);
     this.setState({ errors: errors || {} });
     if (errors) return;
-
-    this.doSubmit();
+    this.doSubmit(e.target);
   };
 
   handleChange = ({ currentTarget: input }) => {
@@ -55,11 +54,39 @@ class MaterialForm extends Component {
     data[input.name] = input.value;
     this.setState({ data, errors });
   };
+
   renderButton(label) {
+    const styles = {
+      button: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+      }
+    };
     return (
-      <button disabled={this.checkForErrors()} className="btn btn-primary">
-        {label}
-      </button>
+      <div style={styles.button}>
+        {this.checkForErrors() && (
+          <Button
+            disabled
+            variant="contained"
+            color="secondary"
+            type="submit"
+            value="Send"
+          >
+            {label}
+          </Button>
+        )}
+        {!this.checkForErrors() && (
+          <Button
+            variant="contained"
+            color="secondary"
+            type="submit"
+            value="Send"
+          >
+            {label}
+          </Button>
+        )}
+      </div>
     );
   }
   renderInput(name, label, type = "text") {
