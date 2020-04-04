@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import SendEmail from "../sendEmail";
 import theme from "../../themes/theme";
 import {
@@ -11,6 +10,7 @@ import {
 } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import Paper from "@material-ui/core/Paper";
+import EmailForm from "../emailForm";
 
 const Contact = () => {
   const styles = {
@@ -45,6 +45,9 @@ const Contact = () => {
             <SendEmail />
           </div>
         </Card>
+      </div>
+      <div>
+        <EmailForm />
       </div>
     </MuiThemeProvider>
   );
