@@ -6,7 +6,7 @@ import NavBar from "./components/navBar";
 import About from "./components/pages/about";
 import Contact from "./components/pages/contact";
 import Home from "./components/pages/home";
-import Code from "./components/pages/code";
+import Code from "./components/pages/code/code";
 import NotFound from "./components/pages/notFound";
 import "./App.css";
 
@@ -18,12 +18,10 @@ class App extends Component {
 
   componentDidMount() {
     this.changeBackground();
-    // this.changeTabValue();
   }
 
   componentDidUpdate() {
     this.changeBackground();
-    //this.changeTabValue();
   }
 
   changeBackground = () => {
@@ -32,7 +30,6 @@ class App extends Component {
 
     if (path === "/")
       document.body.style.backgroundImage = "url(" + background + ")";
-    // = "background: #232834";
     else document.body.style = "background: #5f7481";
   };
 
