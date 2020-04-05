@@ -1,9 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import MaterialForm from "./common/materialForm";
 import Joi from "@hapi/joi";
 import emailjs from "emailjs-com";
-import { useHistory } from "react-router-dom";
-import { withRouter } from "react-router";
 
 class EmailForm extends MaterialForm {
   state = {

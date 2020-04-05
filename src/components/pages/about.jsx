@@ -1,14 +1,8 @@
 import React from "react";
 import theme from "../../themes/theme";
-import {
-  MuiThemeProvider,
-  Box,
-  Container,
-  CardActionArea,
-  CardContent
-} from "@material-ui/core";
+import { MuiThemeProvider, CardContent } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
-import Paper from "@material-ui/core/Paper";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   const styles = {
@@ -31,6 +25,13 @@ const About = () => {
   };
   return (
     <MuiThemeProvider theme={theme}>
+      <Helmet>
+        <title>Bacon Bytes | About</title>
+        <meta
+          name="description"
+          content="Hi, I'm Sean Bacon, web, video game, software developer. Personal developer portfolio. "
+        />
+      </Helmet>
       <div style={styles.container}>
         <Card styles={styles.card}>
           <CardContent style={styles.top}>

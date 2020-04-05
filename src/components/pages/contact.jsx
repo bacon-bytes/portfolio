@@ -3,6 +3,7 @@ import theme from "../../themes/theme";
 import { MuiThemeProvider, CardContent } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import EmailForm from "../emailForm";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const styles = {
@@ -29,6 +30,13 @@ const Contact = () => {
 
   return (
     <MuiThemeProvider theme={theme}>
+      <Helmet>
+        <title>Bacon Bytes | Contact</title>
+        <meta
+          name="description"
+          content="Interested in working together? Send me an email."
+        />
+      </Helmet>
       <div style={styles.container}>
         <Card styles={styles.card}>
           <CardContent style={styles.top}>

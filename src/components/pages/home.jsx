@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
-const textArray = ["Web", "Game", "Software", "Frontend"];
+import { Helmet } from "react-helmet";
+const textArray = ["Web", "Game", "Software", "Frontend", "Javascript", "C#"];
 
 class Home extends Component {
   state = { textIndex: 0 };
@@ -19,9 +19,6 @@ class Home extends Component {
   render() {
     let changingAdjective = textArray[this.state.textIndex % textArray.length];
 
-    const styles = {
-      main: {}
-    };
     return (
       <div
         style={{
@@ -31,6 +28,13 @@ class Home extends Component {
           padding: "70px"
         }}
       >
+        <Helmet>
+          <title>Bacon Bytes | Home</title>
+          <meta
+            name="description"
+            content="Hi, I'm Sean Bacon, web, video game, software developer. Personal developer portfolio. "
+          />
+        </Helmet>
         <h1
           style={{
             color: "White",

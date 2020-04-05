@@ -1,6 +1,7 @@
 import React from "react";
 import theme from "../../themes/theme";
-import { MuiThemeProvider, Box, Container } from "@material-ui/core";
+import { MuiThemeProvider } from "@material-ui/core";
+import { Helmet } from "react-helmet";
 import Paper from "@material-ui/core/Paper";
 
 const Code = () => {
@@ -12,16 +13,14 @@ const Code = () => {
   };
   return (
     <MuiThemeProvider theme={theme}>
-      <Paper style={styles.paper}>
-        {/* <Box color={theme.palette.primary.contrastText}>
-          <h1>Projects</h1>
-
-          <Box
-            color={theme.palette.secondary.light}
-            padding={(50, 50, 50, 50)}
-          ></Box>
-        </Box> */}
-      </Paper>
+      <Helmet>
+        <title>Bacon Bytes | Code</title>
+        <meta
+          name="description"
+          content="A sampling of previous code development work and projects."
+        />
+      </Helmet>
+      <Paper style={styles.paper}></Paper>
     </MuiThemeProvider>
   );
 };

@@ -1,21 +1,14 @@
 import React, { Component } from "react";
-import {
-  Route,
-  Switch,
-  Redirect,
-  useLocation,
-  withRouter
-} from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { MuiThemeProvider } from "@material-ui/core";
 import theme from "./themes/theme";
 import NavBar from "./components/navBar";
 import About from "./components/pages/about";
 import Contact from "./components/pages/contact";
-import Projects from "./components/pages/projects";
-import Work from "./components/pages/work";
 import Home from "./components/pages/home";
-import "./App.css";
 import Code from "./components/pages/code";
+import NotFound from "./components/pages/notFound";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -65,7 +58,9 @@ class App extends Component {
                 <Route path="/about" component={About} />
                 <Route path="/code" component={Code} />
                 <Route path="/contact" component={Contact} />
-                <Route path="/" component={Home} />
+                <Route path="/not-found" component={NotFound} />
+                <Route path="/" exact component={Home} />
+                <Redirect to="/not-found" />
               </Switch>
             </div>
           </div>

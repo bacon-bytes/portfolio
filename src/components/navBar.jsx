@@ -20,16 +20,14 @@ const NavBar = ({ triggerChange, tabValue }) => {
     switch (path) {
       case "/":
         return 0;
-        break;
+      case "/not-found":
+        return 0;
       case "/code":
         return 1;
-        break;
       case "/about":
         return 2;
-        break;
       case "/contact":
         return 3;
-        break;
       default:
         break;
     }

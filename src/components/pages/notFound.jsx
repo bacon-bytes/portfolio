@@ -3,7 +3,7 @@ import theme from "../../themes/theme";
 import { MuiThemeProvider } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 
-const Projects = () => {
+const NotFound = () => {
   const styles = {
     paper: {
       minHeight: 50,
@@ -12,9 +12,11 @@ const Projects = () => {
   };
   return (
     <MuiThemeProvider theme={theme}>
-      <Paper style={styles.paper}></Paper>
+      <Paper style={styles.paper}>
+        <h1>Page Not Found</h1>
+      </Paper>
     </MuiThemeProvider>
   );
 };
 
-export default Projects;
+export default NotFound;
