@@ -48,8 +48,8 @@ const About = () => {
             discovered that the ability to make video games wasn’t witchcraft
             but in fact a series of logical steps. Ever since I have been on a
             journey of continuous knowledge consumption. When I am not coding
-            behind a computer I can be found somewhere outside enjoying the
-            nature of Colorado.
+            behind a computer I can be found somewhere outside climbing or
+            enjoying the nature of Colorado.
           </div>
         </Card>
       </div>
