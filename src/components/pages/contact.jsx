@@ -25,6 +25,11 @@ const Contact = () => {
       display: "flex",
       justifyContent: "center",
       alignItems: "center"
+    },
+    head: {
+      color: "#1f2430",
+      textAlign: "center",
+      fontFamily: "Rubik"
     }
   };
 
@@ -40,7 +45,7 @@ const Contact = () => {
       <div style={styles.container}>
         <Card styles={styles.card}>
           <CardContent style={styles.top}>
-            <h1>Contact</h1>
+            <h1 style={styles.head}>Contact</h1>
           </CardContent>
           <div style={styles.content}>
             <EmailForm />

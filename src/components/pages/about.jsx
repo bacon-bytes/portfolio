@@ -20,7 +20,13 @@ const About = () => {
     },
     content: {
       maxWidth: 400,
-      padding: 20
+      padding: 20,
+      textIndent: 40
+    },
+    head: {
+      color: "#1f2430",
+      textAlign: "center",
+      fontFamily: "Rubik"
     }
   };
   return (
@@ -35,18 +41,15 @@ const About = () => {
       <div style={styles.container}>
         <Card styles={styles.card}>
           <CardContent style={styles.top}>
-            <h1>About Me</h1>
+            <h1 style={styles.head}>About Me</h1>
           </CardContent>
           <div style={styles.content}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit
-            amet mi ullamcorper, dignissim est non, convallis leo. Mauris vel
-            nisi vel erat dapibus auctor. Donec malesuada, lorem id rutrum
-            finibus, urna ipsum suscipit eros, id pharetra lacus velit et mi.
-            Integer ut quam dapibus, ullamcorper nibh eget, accumsan libero.
-            Donec porttitor pellentesque eros non elementum. Vestibulum sed odio
-            cursus, sollicitudin ipsum eget, dignissim arcu. Maecenas viverra
-            consequat aliquam. Cras vulputate a sem at volutpat. Aenean eget
-            ipsum velit. Nulla id sagittis libero, non aliquam nunc.
+            Hi, I’m Sean. I got into coding back in the early 2010’s after I
+            discovered that the ability to make video games wasn’t witchcraft
+            but in fact a series of logical steps. Ever since I have been on a
+            journey of continuous knowledge consumption. When I am not coding
+            behind a computer I can be found somewhere outside enjoying the
+            nature of Colorado.
           </div>
         </Card>
       </div>

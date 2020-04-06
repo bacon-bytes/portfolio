@@ -19,15 +19,25 @@ class Home extends Component {
   render() {
     let changingAdjective = textArray[this.state.textIndex % textArray.length];
 
+    const styles = {
+      head: {
+        color: "White",
+        textAlign: "center",
+        fontFamily: "Libre Baskerville",
+        //fontFamily: "Proza Libre",
+        fontWeight: "bold",
+        textShadow: "1px 1px #000000"
+      },
+      container: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "70px"
+      }
+    };
+
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: "70px"
-        }}
-      >
+      <div style={styles.container}>
         <Helmet>
           <title>Bacon Bytes | Home</title>
           <meta
@@ -35,16 +45,7 @@ class Home extends Component {
             content="Hi, I'm Sean Bacon, web, video game, software developer. Personal developer portfolio. "
           />
         </Helmet>
-        <h1
-          style={{
-            color: "White",
-            textAlign: "center",
-            fontFamily: "Libre Baskerville",
-            //fontFamily: "Proza Libre",
-            fontWeight: "bold",
-            textShadow: "1px 1px #000000"
-          }}
-        >
+        <h1 style={styles.head}>
           Hi, I'm Sean
           <br />
           <br />
