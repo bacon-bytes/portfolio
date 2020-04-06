@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "@material-ui/core/Card";
+import "./code.css";
 
 const CodeCard = ({
   title,
@@ -44,6 +45,9 @@ const CodeCard = ({
     descSpan: {
       fontSize: 15,
       padding: 10
+    },
+    a: {
+      color: "#000000"
     }
   };
   return (
@@ -61,7 +65,7 @@ const CodeCard = ({
         <span style={styles.descSpan}>{description}</span>
         {link && <br />}
         {link && (
-          <span style={styles.descSpan}>
+          <span style={styles.descSpan} class="linkClass">
             <a href={link}>{linktitle}</a>
           </span>
         )}

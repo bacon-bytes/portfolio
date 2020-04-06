@@ -1,0 +1,9 @@
+.linkClass a:link {
+  color: #77a8d9;
+}
+.linkClass a:hover {
+  color: #5ccfe6;
+}
+.linkClass a:visited {
+  color: #f28779;
+}
