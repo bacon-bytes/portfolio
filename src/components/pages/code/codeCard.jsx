@@ -13,23 +13,21 @@ const CodeCard = ({
   const styles = {
     card: {
       minHeight: 70,
-      minWidth: 450,
-      maxWidth: 500
+      minWidth: 350
     },
     iconSpan: {
       float: "left",
-      height: 105,
-      width: 115,
+      height: 210,
+      width: 150,
       backgroundColor: color
     },
     textDiv: {
-      marginTop: 15
+      marginTop: 60
     },
     iconImage: {
-      height: "85%",
+      height: "50%",
       width: "90%",
-      marginTop: 15,
-      marginBottom: 10,
+      marginTop: 70,
       display: "block",
       marginLeft: "auto",
       marginRight: "auto"
