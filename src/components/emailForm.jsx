@@ -8,30 +8,25 @@ class EmailForm extends MaterialForm {
     data: {
       user_name: "",
       user_email: "",
-      message: ""
+      message: "",
     },
     genres: [],
-    errors: {}
+    errors: {},
   };
 
   schema = Joi.object({
-    user_name: Joi.string()
-      .required()
-      .label("Name"),
+    user_name: Joi.string().required().label("Name"),
 
     user_email: Joi.string()
       .email({ tlds: { allow: false } })
       .required()
       .label("Email"),
 
-    message: Joi.string()
-      .required()
-      .label("Message")
+    message: Joi.string().required().label("Message"),
   });
 
-  doSubmit = target => {
+  doSubmit = (target) => {
     window.location = "/";
-    //this.props.history.push("/");
     sendEmail(target);
   };
 
@@ -57,15 +52,6 @@ function sendEmail(target) {
     target,
     "user_ORMrxVi9MVawG7Sjvxr7W"
   );
-
-  // .then(
-  //   result => {
-  //     console.log(result.text);
-  //   },
-  //   error => {
-  //     console.log(error.text);
-  //   }
-  // );
 }
 
 export default EmailForm;
