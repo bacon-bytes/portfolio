@@ -8,8 +8,8 @@ import CodeImage from "./codeImage";
 const Code = () => {
   const styles = {
     row: {
-      padding: 10
-    }
+      padding: 10,
+    },
   };
   const rowCard = "col-xs-15 col-sm-6";
   const rowImage = "col-xs-15 col-sm-6 col-md-6";
@@ -19,10 +19,8 @@ const Code = () => {
     blue: "#5ccfe6",
     purple: "#d4bfff",
     pink: "#f28779",
-    yellow: "#ffd580"
+    yellow: "#ffd580",
   };
-
-  const namespaceDescription = "Everything from enemy ai to frame counts.";
 
   return (
     <MuiThemeProvider theme={theme}>
@@ -34,6 +32,17 @@ const Code = () => {
         />
       </Helmet>
       <div className="row center-xs center-sm center-md center-lg">
+        <div className={rowCard} style={styles.row}>
+          <div className="box">
+            <CodeCard
+              title="Portfolio"
+              color={colors.blue}
+              image="./reactLogo.png"
+              link="https://github.com/bacon-bytes/portfolio"
+              linktitle="github"
+            />
+          </div>
+        </div>
         <div className={rowCard} style={styles.row}>
           <div className="box">
             <CodeCard

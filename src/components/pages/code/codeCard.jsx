@@ -9,46 +9,48 @@ const CodeCard = ({
   color,
   image,
   link,
-  linktitle
+  linktitle,
 }) => {
   const styles = {
     card: {
       minHeight: 70,
-      minWidth: 350
+      minWidth: 350,
     },
     iconSpan: {
       float: "left",
       height: 210,
       width: 150,
-      backgroundColor: color
+      backgroundColor: color,
     },
     textDiv: {
-      marginTop: 60
+      marginTop: 60,
     },
     iconImage: {
-      height: "50%",
-      width: "90%",
-      marginTop: 70,
+      // height: "50%",
+      height: 120,
+      // width: "90%",
+      width: 120,
+      marginTop: 40,
       display: "block",
       marginLeft: "auto",
-      marginRight: "auto"
+      marginRight: "auto",
     },
     titleSpan: {
       fontSize: 20,
-      padding: 10
+      padding: 10,
     },
     subTitleSpan: {
       fontSize: 17,
       padding: 10,
-      color: "gray"
+      color: "gray",
     },
     descSpan: {
       fontSize: 15,
-      padding: 10
+      padding: 10,
     },
     a: {
-      color: "#000000"
-    }
+      color: "#000000",
+    },
   };
   return (
     <Card style={styles.card}>
