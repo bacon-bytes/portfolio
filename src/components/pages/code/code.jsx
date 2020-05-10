@@ -35,13 +35,16 @@ const Code = () => {
         <div className={rowCard} style={styles.row}>
           <div className="box">
             <CodeCard
-              title="Portfolio"
+              title="Chat App"
               color={colors.blue}
               image="./reactLogo.png"
-              link="https://github.com/bacon-bytes/portfolio"
+              link="https://github.com/bacon-bytes/chat"
               linktitle="github"
             />
           </div>
+        </div>
+        <div className={rowImage} style={styles.row}>
+          <CodeImage color={colors.blue} link="./chatAppPortfolio.gif" />
         </div>
         <div className={rowCard} style={styles.row}>
           <div className="box">
